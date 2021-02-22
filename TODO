@@ -1,0 +1,18 @@
+TODO
+====
+
+Next
+----
+
+* A correct file browser ?
+* For the copy-paste mechanism
+  * Including rotations & transformations ?
+  * Extend rotate & transform to the whole map, centered on the center ?
+  * With or without destruction
+  * Ability to paste a blueprint in the active window
+
+Other
+-----
+
+* Mouse interactions
+* Walls/fortifications/floors building

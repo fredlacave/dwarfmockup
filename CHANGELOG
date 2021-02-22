@@ -1,0 +1,57 @@
+2016-02-02 : Version 1.2.0
+--------------------------
+
+* New drawing modes : lines and empty ellipses
+* New build phase : walls & floors
+* Shortcut to hide the starting point of the design (blinking X)
+* Bug fixes
+
+
+2016-01-26 : Version 1.1.2
+--------------------------
+
+* Bug fixes
+
+
+2016-01-21 : Version 1.1.1 (unreleased)
+---------------------------------------
+
+* Bug fixes
+
+
+2014-09-29 : Version 1.1.0 (unreleased)
+---------------------------------------
+
+* Undo / Redo support
+* Cut / Copy / Paste support
+* Help window
+* New file action
+* Confirmations before quitting / loading if a blueprint is modified
+* New boolean preferences : ghost, crosshairs
+* Protect mode : allows to use the 'dig' mode only on walls, thus not clearing stairs, holes and ramps
+
+
+2014-09-15 : Version 1.0.3
+--------------------------
+
+* Fixed the build phase (reported by Xeandra on the forums)
+
+
+2014-09-09 : Version 1.0.2
+--------------------------
+
+* First public release !
+* Updated the README file
+* Fixed bugs for the bundled .exe version
+
+
+2014-09-08 : Version 1.0.1
+--------------------------
+
+* Buxfix for the command tiles (stockpiles, adjustments)
+
+
+2014-09-05 : Version 1.0.0
+--------------------------
+
+* First release

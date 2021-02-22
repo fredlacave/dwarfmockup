@@ -1,0 +1,6 @@
+.attic/*
+.idea/*
+blueprints/*
+*.exe
+Gemfile.lock
+dwarfmockup.conf
