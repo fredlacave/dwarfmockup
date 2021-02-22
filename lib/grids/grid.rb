@@ -4,7 +4,7 @@
 require_relative 'tile'
 require_relative 'shape'
 
-require 'RMagick'
+require 'rmagick'
 
 class Grid
   include Enumerable
