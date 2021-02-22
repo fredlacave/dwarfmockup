@@ -38,10 +38,10 @@ class InputBox < Dialog
                       pos_x, @text_y + @text_h + @pad - 2, 0xff3333ff, 1001)
 
     # Title
-    @font.draw(@title, @title_x, @title_y, 1000, 1, 1, 0xff000000)
+    @font.draw_text(@title, @title_x, @title_y, 1000, 1, 1, 0xff000000)
 
     # Text
-    @font.draw(self.text, @text_x, @text_y, 1000, 1, 1, 0xff000000)
+    @font.draw_text(self.text, @text_x, @text_y, 1000, 1, 1, 0xff000000)
   end
 
   def click

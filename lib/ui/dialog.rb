@@ -49,7 +49,7 @@ class Dialog < Gosu::TextInput
     @window.rectangle(@x       , @y       , @w           , @h           , 0xffdddddd, 1000)
 
     # Title
-    @font.draw(@title, @title_x, @title_y, 1000, 1, 1, 0xff000000)
+    @font.draw_text(@title, @title_x, @title_y, 1000, 1, 1, 0xff000000)
   end
 
   def hit_test

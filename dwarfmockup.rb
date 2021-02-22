@@ -5,6 +5,7 @@ ocra = ENV['OCRA_EXECUTABLE'] rescue nil
 
 require 'fileutils'
 
+
 if Gem.win_platform?
   if ocra && !ocra.empty?
     EXEC_PATH = File.dirname(File.expand_path(__FILE__)).gsub(/\//, '\\')
@@ -18,6 +19,8 @@ if Gem.win_platform?
     require 'win32/api'
     APP_PATH = File.dirname(File.expand_path(__FILE__))
     EXEC_PATH = APP_PATH
+    IMAGE_MAGICK_PATH = EXEC_PATH.gsub(/\//, '\\') + '\\vendor\\ImageMagick-7.0.11-Q16-HDRI'
+    ENV['PATH'] = IMAGE_MAGICK_PATH + ';' + ENV['PATH']
   end
 else
   APP_PATH = File.dirname(File.expand_path(__FILE__))
