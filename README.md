@@ -8,10 +8,6 @@ This is a simple utility that allows you to quickly design rooms for Dwarf Fortr
 
 The designs can then be imported into quickfort to translate them into orders for your dwarves...
 
-
-![screenshot](https://bitbucket.org/fredsen/dwarfmockup/raw/tip/misc/images/screenshot.png)
-
-
 Usage :
 -------
 
