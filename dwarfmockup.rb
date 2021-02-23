@@ -1,4 +1,4 @@
-#! /usr/local/bin/ruby
+#! /usr/bin/env ruby
 # encoding: utf-8
 
 ocra = ENV['OCRA_EXECUTABLE'] rescue nil
