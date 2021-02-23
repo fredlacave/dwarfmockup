@@ -42,7 +42,7 @@ class MessageBox < Dialog
       bx = @button_x + bi * @button_w
       @window.rectangle(bx, @button_y, @button_w - @pad, @button_h, (p == bi ? 0xffcccccc : 0xffffffff), 1001)
       tw = @font.text_width(v)
-      @font.draw(v, bx + (@button_w - tw) / 2, @button_ty, 1002, 1, 1, 0xff000000)
+      @font.draw_text(v, bx + (@button_w - tw) / 2, @button_ty, 1002, 1, 1, 0xff000000)
       bi += 1
     end
   end

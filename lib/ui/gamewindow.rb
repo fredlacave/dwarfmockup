@@ -444,7 +444,7 @@ class GameWindow < Gosu::Window
       @ml = t.index { |l| l =~ /^\s*#{@mode} :/ }
       @sl = t.index { |l| l =~ /^\s*#{@sel.mode_s.upcase} :/ }
       @pl = (@protect ? t.index { |l| l =~ /^\s*P :/ } : nil)
-      @legend = Gosu::Image.from_text(self, t.join("\n"), @font.name, @ts, 0, self.width - @sep_l - 6, :left)
+      @legend = Gosu::Image.from_text(t.join("\n"), @ts, font: @font.name, width: self.width - @sep_l - 6, align: :left)
       @last_mode = [ full_mode, @protect ]
     end
     @legend.draw(@sep_l + 8, 0, -2)
@@ -457,13 +457,13 @@ class GameWindow < Gosu::Window
       @grid_legend = nil if @sel.moved
       if @grid_legend.nil?
         @sel.moved = false
-        @grid_legend = Gosu::Image.from_text(self, @sel.legend, @font.name, @ts, 0, self.width - @sep_l - 8, :left)
+        @grid_legend = Gosu::Image.from_text(@sel.legend, @ts, font: @font.name, width: self.width - @sep_l - 8, align: :left)
       end
 
       @grid_legend.draw(@sep_l + 8, self.height - @ts * 2 - 2, -2)
 
       if fullscreen?
-        @font.draw(caption, @sep_l + 8, self.height - @ts * 3, 1000, 1, 1, 0xffffffff)
+        @font.draw_text(caption, @sep_l + 8, self.height - @ts * 3, 1000, 1, 1, 0xffffffff)
       end
     end
   end

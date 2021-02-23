@@ -31,7 +31,7 @@ class TextScrollBox < MessageBox
     0.upto(@nl) do |l|
       break if @pos + x >= @text.length
       w = @font.text_width(@text[@pos + l])
-      @font.draw(@text[@pos + l], (@text_x + (@w - w) / 2).to_i, @text_y + l * @ts, 1002, 1, 1, 0xffffffff)
+      @font.draw_text(@text[@pos + l], (@text_x + (@w - w) / 2).to_i, @text_y + l * @ts, 1002, 1, 1, 0xffffffff)
     end
   end
 

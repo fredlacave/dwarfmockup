@@ -8,16 +8,18 @@ require 'fileutils'
 if Gem.win_platform?
   if ocra && !ocra.empty?
     EXEC_PATH = File.dirname(File.expand_path(__FILE__)).gsub(/\//, '\\')
-    # IMAGE_MAGICK_PATH = EXEC_PATH + '\\vendor\\ImageMagick-6.6.9-Q8'
-    # ENV['PATH'] = IMAGE_MAGICK_PATH + ';' + ENV['PATH']
+    IMAGE_MAGICK_PATH = EXEC_PATH
+    ENV['PATH'] = IMAGE_MAGICK_PATH + ';' + ENV['PATH']
     ENV['BUNDLE_GEMFILE'] = EXEC_PATH + '\\Gemfile'
     APP_PATH = File.dirname(File.expand_path(ocra))
     rd = File.join(APP_PATH, 'res')
-    FileUtils.cp_r(File.join(EXEC_PATH, 'res'), rd) unless File.exists?(rd)
+    FileUtils.cp_r(File.join(EXEC_PATH, 'res'), rd) unless File.exist?(rd)
   else
     require 'win32/api'
     APP_PATH = File.dirname(File.expand_path(__FILE__))
     EXEC_PATH = APP_PATH
+    IMAGE_MAGICK_PATH = EXEC_PATH.gsub(/\//, '\\') + '\\vendor\\ImageMagick-7.0.11-Q16-HDRI'
+    ENV['PATH'] = IMAGE_MAGICK_PATH + ';' + ENV['PATH']
   end
 else
   APP_PATH = File.dirname(File.expand_path(__FILE__))
@@ -29,7 +31,6 @@ Bundler.require
 
 require 'csv'
 require 'singleton'
-require 'thread'
 
 require_relative 'lib/misc/const'
 require_relative 'lib/misc/extend'
